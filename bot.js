@@ -401,10 +401,9 @@ client.on('message', message => {
     
         
 });
-
 client.on('message', message => {
-var prefix = "0." 
-if(message.content.startsWith(prefix +"server"))
+var prefix = "$" // البريفكس
+if(message.content.startsWith(prefix +"server")){ // الامر
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply(`**هذه الخاصية للادارة فقط** ❎ `)
 if(!message.channel.guild) return message.reply(' ');
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
@@ -427,7 +426,6 @@ message.channel.sendEmbed(embed)
 
 }
 });
-
 
 const pubg = [
      'PUBG | ما هو اقوي سلاح برائيك ؟',
